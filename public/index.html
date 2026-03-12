@@ -390,15 +390,16 @@
       <div class="form-grid">
         <div class="form-group full">
           <label>Feedback Page URL</label>
-          <input type="text" id="feedbackUrl" placeholder="e.g. http://136.233.130.148:8082/feedback/" value="http://136.233.130.148:8082/feedback/"/>
+          <input type="text" id="feedbackUrl" placeholder="Paste feedback URL here e.g. http://136.233.130.148:8082/feedback/" />
         </div>
         <div class="form-group full">
           <label>Student ID</label>
-          <input type="text" id="studentId" placeholder="e.g. 23CE077" value="23CE077"/>
+          <input type="text" id="studentId" placeholder="Enter your Student ID e.g. 23CE077" />
         </div>
         <div class="form-group">
           <label>Institute</label>
           <select id="institute">
+            <option value="" disabled selected>-- Select Institute --</option>
             <option value="CSPIT">CSPIT</option>
             <option value="DEPSTAR">DEPSTAR</option>
             <option value="CMPICA">CMPICA</option>
@@ -407,6 +408,7 @@
         <div class="form-group">
           <label>Programme</label>
           <select id="programme">
+            <option value="" disabled selected>-- Select Programme --</option>
             <option value="B.Tech.">B.Tech.</option>
             <option value="M.Tech.">M.Tech.</option>
             <option value="MCA">MCA</option>
@@ -415,6 +417,7 @@
         <div class="form-group">
           <label>Department</label>
           <select id="department">
+            <option value="" disabled selected>-- Select Department --</option>
             <option value="Computer Engineering">Computer Engineering</option>
             <option value="Information Technology">Information Technology</option>
             <option value="Electronics">Electronics</option>
@@ -425,12 +428,13 @@
         <div class="form-group">
           <label>Semester</label>
           <select id="semester">
+            <option value="" disabled selected>-- Select Semester --</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-            <option value="6" selected>6</option>
+            <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
@@ -480,7 +484,7 @@
 
   <script>
     // Point to your Render backend URL
-    const API_BASE = "https://feedback-automation.onrender.com";
+    const API_BASE = window.location.origin;
 
     let eventSource = null;
     let successCount = 0;
