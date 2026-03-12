@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: charusat-feedback-bot
+    env: node
+    buildCommand: npm install && npx playwright install chromium --with-deps
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: /opt/render/project/.cache/ms-playwright
